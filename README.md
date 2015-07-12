@@ -1,6 +1,12 @@
 # WooCommerce Paged Product Variations
 WooCommerce Paged Product Variations is a project committed to making large storefronts using WooCommerce manageable by having the variations in the back-end paginated.
 
+## Example
+The below is an example of what the plugin looks like in action. The default setting (which can be changed via a filter) is 10 variations per page.
+
+
+![alt text](https://i.imgur.com/XPTrc4S.png "Paged Variations Example")
+
 ## Installation
 Grab a zip of the repository and drop it in your 'plugins' folder inside WordPress. I'll also be looking to place this on the official WP plugins repo.
 

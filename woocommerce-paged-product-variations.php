@@ -27,10 +27,6 @@ class WooCommerce_Paged_Product_Variations {
 			add_action( 'admin_enqueue_scripts' , array($this,'enqueue_scripts'));
 		}
 
-		add_action('paged_variations_posts_per_page',function($number){
-			return 100;
-		});
-
 		add_action( 'wp_ajax_woocommerce_paged_get_pages', array( $this, 'get_number_of_pages' ) );
 		add_action( 'wp_ajax_woocommerce_paged_get_variations', array( $this, 'get_variations_by_page' ) );
 	}
