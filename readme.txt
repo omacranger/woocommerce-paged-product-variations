@@ -23,11 +23,7 @@ This has only been tested with the latest version of WooCommerce (2.3.13)
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. This is an example of what the plugin looks like in action. The default setting (which can be changed via a filter) is 10 variations per page.
 
 == Frequently Asked Questions ==
 

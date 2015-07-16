@@ -4,7 +4,7 @@
 	Plugin Name: WooCommerce Paged Product Variations
 	Plugin URI: http://designloaf.com
 	Description: A plugin designed to make variation boxes more manageable for large store owners.
-	Version: 1.0
+	Version: 1.0.1
 	Author: Logan Graham
 	Author URI: http://twitter.com/loganpgraham
 	License: GPL2
@@ -224,6 +224,9 @@ class WooCommerce_Paged_Product_Variations {
 			.toolbar.variation_pages button:first-child {
 				margin-left: 0;
 			}
+			#product_attributes .save_attributes {
+				display: none;
+			}
 		</style>
 		<?php
 	}
@@ -233,10 +236,6 @@ class WooCommerce_Paged_Product_Variations {
 	 *  Function used to remove the default meta boxes by WooCommerce
 	 */
 	function replace_meta_boxes(){
-
-		include( __DIR__ . '/classes/class-wc-paged-meta-box-product-data.php' );
-
-		// Replace Boxes
 		remove_meta_box( 'woocommerce-product-data' , 'product' , 'normal' );
 		add_meta_box( 'woocommerce-product-data', __( 'Product Data', 'wc-paged-variations' ), 'WC_Paged_Meta_Box_Product_Data::output', 'product', 'normal', 'high' );
 	}
