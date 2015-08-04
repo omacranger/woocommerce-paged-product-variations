@@ -198,6 +198,18 @@ class WooCommerce_Paged_Product_Variations {
 					$variation_data['_manage_stock'] = 'yes';
 				}
 
+				// Minimal backwards compat for older versions
+				if(defined('WC_VERSION') && version_compare(WC_VERSION, '2.3.0','<')){
+					// Add some backwards compatability for additional fields (post status, etc)
+					$variation_data['variation_post_status'] = $variation->post_status;
+
+					// Add back additional meta fields which were available prior to 2.3.x
+					$variation_data = array_merge($variation_meta,$variation_data);
+
+					// Fill fields like 2.3.x and include some additional ones for pre 2.3.x
+					extract($variation_data);
+				}
+
 				$file = WP_PLUGIN_DIR . '/woocommerce/includes/admin/meta-boxes/views/html-variation-admin.php' ;
 				include($file);
 
